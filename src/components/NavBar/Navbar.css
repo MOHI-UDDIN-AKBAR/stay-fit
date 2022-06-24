@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap");
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.NavBar .logo {
+  margin-left: 7px;
+  margin-right: 20px;
+}
+.NavBar .logo img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.NavBar .link, .NavBar .activeLink {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 3px solid rgb(103, 103, 103);
+  padding: 0.2rem;
+}
+.NavBar .link button, .NavBar .activeLink button {
+  background-color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  font-family: "Fascinate Inline";
+}
+.NavBar .activeLink {
+  border: none;
+}
+
+@media screen and (max-width: 600px) {
+  .NavBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .NavBar .logo {
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+  .NavBar .logo img {
+    width: 90px;
+    height: 90px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .NavBar .link button, .NavBar .activeLink button {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=Navbar.css.map */
