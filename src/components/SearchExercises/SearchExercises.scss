@@ -1,0 +1,73 @@
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.SearchExercises {
+  width: 100%;
+  @include flexCenter(center, column);
+  .heading {
+    h1 {
+      font-family: "Bungee", cursive;
+      font-size: 50px;
+      text-transform: capitalize;
+      text-align: center;
+    }
+  }
+  .input {
+    // border: 2px solid red;
+    @include flexCenter(center, row);
+    width: 90%;
+    input {
+      padding: 1rem;
+      width: 70%;
+      &::placeholder {
+        color: rgb(108, 107, 107);
+        font-size: 20px;
+      }
+    }
+    button {
+      cursor: pointer;
+      padding: 0.9rem;
+      width: 170px;
+      background-color: rgb(40, 40, 40);
+      color: white;
+      font-size: 20px;
+      border: none;
+      position: relative;
+      left: -3px;
+      //   margin-top: 2px;
+    }
+  }
+  .allCategory {
+    @include flexCenter(center, row);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .SearchExercises {
+    .heading {
+      h1 {
+        font-size: 30px;
+      }
+    }
+    .input {
+      // border: 2px solid red;
+      @include flexCenter(center, row);
+      width: 95%;
+      input {
+        padding: 1rem 0.5rem;
+        width: 60%;
+        &::placeholder {
+          color: rgb(108, 107, 107);
+        }
+      }
+      button {
+        width: 110px;
+      }
+    }
+  }
+}

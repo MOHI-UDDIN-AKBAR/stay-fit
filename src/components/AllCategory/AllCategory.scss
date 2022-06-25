@@ -1,0 +1,21 @@
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
+  align-items: center;
+  //   flex-wrap: wrap;
+}
+.Category {
+  @include flexCenter(center, column);
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+  //   border: 2px solid red;
+  margin: 20px 30px;
+  padding: 2rem;
+  .image {
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.Category {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+  margin: 20px 30px;
+  padding: 2rem;
+}
+.Category .image img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=AllCategory.css.map */

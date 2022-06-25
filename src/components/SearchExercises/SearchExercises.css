@@ -1,0 +1,86 @@
+.SearchExercises {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.SearchExercises .heading h1 {
+  font-family: "Bungee", cursive;
+  font-size: 50px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.SearchExercises .input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+}
+.SearchExercises .input input {
+  padding: 1rem;
+  width: 70%;
+}
+.SearchExercises .input input::-moz-placeholder {
+  color: rgb(108, 107, 107);
+  font-size: 20px;
+}
+.SearchExercises .input input:-ms-input-placeholder {
+  color: rgb(108, 107, 107);
+  font-size: 20px;
+}
+.SearchExercises .input input::placeholder {
+  color: rgb(108, 107, 107);
+  font-size: 20px;
+}
+.SearchExercises .input button {
+  cursor: pointer;
+  padding: 0.9rem;
+  width: 170px;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  font-size: 20px;
+  border: none;
+  position: relative;
+  left: -3px;
+}
+.SearchExercises .allCategory {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  .SearchExercises .heading h1 {
+    font-size: 30px;
+  }
+  .SearchExercises .input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95%;
+  }
+  .SearchExercises .input input {
+    padding: 1rem 0.5rem;
+    width: 60%;
+  }
+  .SearchExercises .input input::-moz-placeholder {
+    color: rgb(108, 107, 107);
+  }
+  .SearchExercises .input input:-ms-input-placeholder {
+    color: rgb(108, 107, 107);
+  }
+  .SearchExercises .input input::placeholder {
+    color: rgb(108, 107, 107);
+  }
+  .SearchExercises .input button {
+    width: 110px;
+  }
+}/*# sourceMappingURL=SearchExercises.css.map */

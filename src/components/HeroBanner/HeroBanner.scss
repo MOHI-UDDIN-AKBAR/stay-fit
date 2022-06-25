@@ -4,16 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
 
-@mixin flexCenter($justify, $direction) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: center;
-  flex-wrap: wrap;
-}
-img {
-  width: 200px;
-}
 .HeroBanner {
   width: 100%;
   margin-top: 10px;

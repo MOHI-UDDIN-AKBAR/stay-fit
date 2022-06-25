@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Switch from "./Switch";
+import Context from "./contexts/Context";
+
 const App = () => {
   return (
     <>
-      <Switch />
+      <Context>
+        <Switch />
+      </Context>
     </>
   );
 };
