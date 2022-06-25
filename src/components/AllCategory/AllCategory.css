@@ -12,4 +12,22 @@
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.Category .right-arrow,
+.Category .left-arrow {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff2625;
+  font-size: 25px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: -20px;
+  right: 80px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
 }/*# sourceMappingURL=AllCategory.css.map */

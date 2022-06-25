@@ -18,4 +18,45 @@
       object-fit: cover;
     }
   }
+  // span {
+  //   text-align: center;
+  // }
+  .right-arrow,
+  .left-arrow {
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff2625;
+    font-size: 25px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: -20px;
+    right: 80px;
+    transform: scale(1, 1);
+    transition: 0.3s all ease-in-out;
+  }
 }
+// .left-arrow {
+//   cursor: pointer;
+//   background: transparent;
+//   outline: none;
+//   border: none;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: #ff2625;
+//   font-size: 25px;
+//   border-radius: 4px;
+//   position: absolute;
+//   bottom: -20px;
+//   right: 80px;
+//   transform: scale(1, 1);
+//   transition: 0.3s all ease-in-out;
+// }
+// .right-arrow {
+//   @extend .left-arrow;
+// }
