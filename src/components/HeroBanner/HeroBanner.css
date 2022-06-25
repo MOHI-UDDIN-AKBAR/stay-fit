@@ -17,7 +17,7 @@ img {
 }
 .HeroBanner .text {
   margin-top: 110px;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -73,7 +73,7 @@ img {
   opacity: 0.9;
 }
 .HeroBanner .image img {
-  width: 100%;
+  width: 95%;
   height: 101vh;
   -o-object-fit: cover;
      object-fit: cover;
