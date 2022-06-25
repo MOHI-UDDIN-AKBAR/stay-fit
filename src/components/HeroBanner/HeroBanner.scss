@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+  flex-wrap: wrap;
+}
+img {
+  width: 200px;
+}
+.HeroBanner {
+  width: 100%;
+  margin-top: 10px;
+  //   border: 1px solid green;
+  @include flexCenter(space-between, row);
+  .text {
+    margin-top: 110px;
+    // border: 2px solid red;
+    padding-left: 2rem;
+    @include flexCenter(flex-start, column);
+    align-items: flex-start;
+    h3 {
+      font-family: "Anek Latin", sans-serif;
+      font-weight: bold;
+      font-size: 25px;
+      margin: 15px 0;
+    }
+    h1 {
+      font-size: 35px;
+      //   font-family: "Sacramento", cursive;
+      font-family: "Bungee", cursive;
+      font-weight: 400;
+      margin: 12px 0;
+    }
+    p {
+      font-family: "Anek Latin", sans-serif;
+      font-weight: 600;
+      color: rgb(97, 97, 97);
+      margin: 20px 0;
+      margin-bottom: 40px;
+    }
+    button {
+      border: none;
+      background-color: white;
+      padding: 0.5rem;
+      font-size: 25px;
+      border: 2px solid rgb(103, 103, 103);
+      border-radius: 5px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .bigText {
+      z-index: -1;
+      h1 {
+        font-family: "Secular One", sans-serif;
+        font-size: 180px;
+        opacity: 0.2;
+        margin: 0;
+      }
+    }
+  }
+  .image {
+    // border: 2px solid red;
+    // position: relative;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    width: 50%;
+    z-index: -1;
+    opacity: 0.9;
+    img {
+      width: 100%;
+      height: 101vh;
+      object-fit: cover;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .HeroBanner {
+    .text {
+      width: 100%;
+      .bigText {
+        display: none;
+      }
+    }
+    .image {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .HeroBanner {
+    .text {
+      width: 100%;
+      .bigText {
+        z-index: -1;
+        h1 {
+          font-family: "Secular One", sans-serif;
+          font-size: 100px;
+          opacity: 0.2;
+          margin: 0;
+        }
+      }
+    }
+    .image {
+      img {
+        height: 100vh;
+      }
+    }
+  }
+}

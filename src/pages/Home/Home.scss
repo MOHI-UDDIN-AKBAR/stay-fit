@@ -1,0 +1,10 @@
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Home {
+  @include flexCenter(center, column);
+}

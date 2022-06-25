@@ -9,6 +9,7 @@
 }
 
 .NavBar {
+  width: 50%;
   @include flexCenter(space-around, row);
   .logo {
     margin-left: 7px;
@@ -40,6 +41,7 @@
 
 @media screen and (max-width: 600px) {
   .NavBar {
+    width: 100%;
     @include flexCenter(space-around, row);
     .logo {
       margin-left: 0px;

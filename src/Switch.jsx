@@ -7,7 +7,7 @@ import Error from "./components/Error/Error";
 import Footer from "./components/Footer/Footer";
 const Switch = () => {
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -15,7 +15,7 @@ const Switch = () => {
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 };
 
