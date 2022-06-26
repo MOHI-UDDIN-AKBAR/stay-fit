@@ -1,0 +1,108 @@
+.Exercises {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+  border: 1px solid green;
+  width: 90%;
+}
+.Exercises .heading {
+  border: 1px solid purple;
+}
+.Exercises .heading h1 {
+  font-size: 30px;
+  margin: 10px 20px;
+  padding: 0 0.3rem;
+}
+.Exercises .allExercises {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid red;
+}
+.Exercises .allExercises .Exercise {
+  border-top: 3px solid rgb(93, 127, 160);
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+  margin: 20px;
+  padding: 0.5rem;
+}
+.Exercises .allExercises .Exercise .image img {
+  width: 320px;
+}
+.Exercises .allExercises .Exercise .texts button {
+  background-color: white;
+  border: none;
+  border: 2px solid rgb(159, 150, 150);
+  font-size: 20px;
+  padding: 0.5rem 0.6rem;
+  margin-left: 15px;
+  border-radius: 15px;
+}
+.Exercises .allExercises .Exercise .description {
+  font-size: 20px;
+  margin-left: 20px;
+}
+.Exercises .pagination {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.Exercises .pagination .paginationComponent {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .Exercises {
+    width: 100%;
+  }
+  .Exercises .heading h1 {
+    font-size: 25px;
+    margin: 10px 20px;
+    padding: 0 0.3rem;
+  }
+  .Exercises .allExercises {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .Exercises .allExercises .Exercise {
+    margin: 10px;
+  }
+  .Exercises .allExercises .Exercise .image img {
+    width: 300px;
+  }
+  .Exercises .allExercises .Exercise .texts button {
+    font-size: 16px;
+    padding: 0.3rem 0.5rem;
+  }
+  .Exercises .allExercises .Exercise .description {
+    font-size: 18px;
+  }
+  .Exercises .pagination {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .Exercises .pagination .paginationComponent {
+    width: 80%;
+    border: 2px solid red;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=Exercises.css.map */

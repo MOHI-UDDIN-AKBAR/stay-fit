@@ -2,19 +2,46 @@ import React, { useEffect, useState } from "react";
 import "./SearchExercises.css";
 import AllCategory from "../../components/AllCategory/AllCategory";
 import { useAllAboutGymExercise } from "../../contexts/Context";
+const url = "https://exercisedb.p.rapidapi.com/exercises/bodyPartList";
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "493a90b2aemsh1962f7595e10b6dp18d377jsncc1d0ad2c57c",
+    "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+  },
+};
+
+const urlForAllExercise = "https://exercisedb.p.rapidapi.com/exercises";
+const urlForForSearchingExercise =
+  "https://exercisedb.p.rapidapi.com/exercises";
 const SearchExercises = () => {
-  const { search, setSearch, bodyParts, getAllBodyParts, setBodyParts } =
-    useAllAboutGymExercise();
+  const {
+    search,
+    setSearch,
+    bodyParts,
+    getAllBodyParts,
+    setBodyParts,
+    getData,
+    exercises,
+    bodyPart,
+    getDataBySearching,
+  } = useAllAboutGymExercise();
   const handleExercise = () => {
+    getDataBySearching(urlForForSearchingExercise, options);
     // console.log(search);
   };
   useEffect(() => {
-    console.log(bodyParts);
-    getAllBodyParts();
+    // console.log(bodyParts);
+    getAllBodyParts(url, options);
   }, []);
+
   useEffect(() => {
-    console.log(search);
+    // console.log(search);
   }, [search]);
+  // useEffect(() => {
+  //   // getData(urlForAllExercise, options);
+  //   console.log(exercises);
+  // }, [bodyPart]);
   return (
     <div className="SearchExercises">
       <div className="heading">

@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./AllCategory.css";
 import avatarMan from "../../assets/avatarMan.svg";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
-import ForNow from "./ForNow";
+import { useAllAboutGymExercise } from "../../contexts/Context";
 
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
@@ -29,14 +29,19 @@ const RightArrow = () => {
 };
 
 const AllCategory = ({ bodyParts }) => {
+  const { bodyPart, setBodyPart } = useAllAboutGymExercise();
+  useEffect(() => {
+    console.log(bodyPart);
+  }, [bodyPart]);
   return (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
-      {bodyParts.map((item, id) => (
+      {bodyParts.map((item) => (
         <div
           key={item.id || item}
           itemId={item.id || item}
           title={item.id || item}
           className="Category"
+          onClick={() => setBodyPart(item)}
         >
           <div className="image">
             <img src={avatarMan} alt={item} />
