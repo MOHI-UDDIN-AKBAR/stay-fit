@@ -1,15 +1,34 @@
 import React, { createContext, useContext, useState } from "react";
 const gymExercise = createContext();
 
+const optionsForYoutube = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": process.env.REACT_APP_EXERCISE_API_KEY,
+    "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
+  },
+};
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": process.env.REACT_APP_EXERCISE_API_KEY,
+    "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+  },
+};
+
 const Context = ({ children }) => {
   const [search, setSearch] = useState("");
   const [bodyParts, setBodyParts] = useState(["all"]);
   const [bodyPart, setBodyPart] = useState("all");
   const [exercises, setExercises] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [similarExercise, setSimilarExercise] = useState([]);
+  const [similarEquipment, setSimilarEquipment] = useState([]);
+  const [exerciseFromYoutube, setExerciseFromYoutube] = useState([]);
+
   const getAllBodyParts = async (url, options) => {
     try {
-      setIsLoading(true);
+      // setIsLoading(true);
       const response = await fetch(url, options);
       const data = await response.json();
       //   console.log(data);
@@ -42,7 +61,7 @@ const Context = ({ children }) => {
   };
   const getDataBySearching = async (url, options) => {
     try {
-      setIsLoading(true);
+      // setIsLoading(true);
       const response = await fetch(url, options);
       const data = await response.json();
       if (data) {
@@ -64,6 +83,52 @@ const Context = ({ children }) => {
       console.log(error);
     }
   };
+  const getSimilarExerciseFromYoutube = async (exerciseName) => {
+    // console.log(exerciseName);
+    try {
+      const response = await fetch(
+        `https://youtube-search-and-download.p.rapidapi.com/search?query=${exerciseName} exercise`,
+        optionsForYoutube
+      );
+      const data = await response.json();
+      if (data) {
+        // console.log(data);
+        setExerciseFromYoutube(data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getSimilarExerciseFromTarget = async (CurrentExerciseTargetName) => {
+    try {
+      const response = await fetch(
+        `https://exercisedb.p.rapidapi.com/exercises/target/${CurrentExerciseTargetName}`,
+        options
+      );
+      const data = await response.json();
+      if (data) {
+        setSimilarExercise(data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const getSimilarExerciseEquipment = async (CurrentExerciseTargetName) => {
+    try {
+      const response = await fetch(
+        `https://exercisedb.p.rapidapi.com/exercises/equipment/${CurrentExerciseTargetName}`,
+        options
+      );
+      const data = await response.json();
+      if (data) {
+        // console.log(data);
+        setSimilarEquipment(data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <gymExercise.Provider
       value={{
@@ -76,8 +141,15 @@ const Context = ({ children }) => {
         setBodyPart,
         getData,
         exercises,
+        getSimilarExerciseFromYoutube,
         isLoading,
         getDataBySearching,
+        getSimilarExerciseFromTarget,
+        similarExercise,
+        exerciseFromYoutube,
+        similarEquipment,
+        setSimilarEquipment,
+        getSimilarExerciseEquipment,
       }}
     >
       {children}

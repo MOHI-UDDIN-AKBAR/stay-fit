@@ -3,10 +3,11 @@ import { useAllAboutGymExercise } from "../../contexts/Context";
 import Loader from "../Loader/Loader";
 import { Pagination } from "@mui/material";
 import "./Exercises.css";
+import { Link } from "react-router-dom";
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "493a90b2aemsh1962f7595e10b6dp18d377jsncc1d0ad2c57c",
+    "X-RapidAPI-Key": process.env.REACT_APP_EXERCISE_API_KEY,
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };
@@ -27,6 +28,7 @@ const Exercises = () => {
   };
   useEffect(() => {
     getData(urlForAllExercise, options, bodyPart);
+
     // console.log(exercises);
   }, [bodyPart]);
   return (
@@ -37,20 +39,22 @@ const Exercises = () => {
       <div className="allExercises">
         {currentExercise?.map((exercise) => {
           return (
-            <div className="Exercise" key={exercise.id}>
-              <div className="image">
-                <img
-                  src={exercise.gifUrl}
-                  alt={exercise.bodyPart}
-                  loading="lazy"
-                />
-                <div className="texts">
-                  <button>{exercise.bodyPart}</button>
-                  <button>{exercise.target}</button>
+            <Link to={`/exercise/${exercise.id}`} key={exercise.id}>
+              <div className="Exercise">
+                <div className="image">
+                  <img
+                    src={exercise.gifUrl}
+                    alt={exercise.bodyPart}
+                    loading="lazy"
+                  />
+                  <div className="texts">
+                    <button>{exercise.bodyPart}</button>
+                    <button>{exercise.target}</button>
+                  </div>
                 </div>
+                <h2 className="description">{exercise.name.slice(0, 20)}...</h2>
               </div>
-              <h2 className="description">{exercise.name.slice(0, 20)}...</h2>
-            </div>
+            </Link>
           );
         })}
       </div>

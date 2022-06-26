@@ -1,0 +1,57 @@
+.exerciseFromYoutube {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 4px solid green;
+}
+.exerciseFromYoutube .heading h1 {
+  margin: 10px 0;
+}
+.exerciseFromYoutube .heading h1 span {
+  color: red;
+}
+.exerciseFromYoutube .allExerciseFromYoutube {
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.exerciseFromYoutube .allExerciseFromYoutube a {
+  border: 1px solid green;
+  width: 300px;
+  text-decoration: none;
+  color: black;
+  margin: 30px;
+}
+.exerciseFromYoutube .allExerciseFromYoutube a .image {
+  border: 1px solid purple;
+}
+.exerciseFromYoutube .allExerciseFromYoutube a .image img {
+  width: 100%;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.exerciseFromYoutube .allExerciseFromYoutube a .titleAndChannelName {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+.exerciseFromYoutube .allExerciseFromYoutube a .titleAndChannelName span {
+  font-size: 20px;
+  padding: 0.3rem;
+  font-weight: bold;
+}
+.exerciseFromYoutube .allExerciseFromYoutube a .titleAndChannelName small {
+  font: 16px;
+  padding: 0.3rem;
+  color: rgb(95, 92, 92);
+}/*# sourceMappingURL=ExerciseFromYoutube.css.map */

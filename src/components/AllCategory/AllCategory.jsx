@@ -4,7 +4,7 @@ import avatarMan from "../../assets/avatarMan.svg";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import { useAllAboutGymExercise } from "../../contexts/Context";
 
-const LeftArrow = () => {
+export const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
 
   return (
@@ -14,7 +14,7 @@ const LeftArrow = () => {
   );
 };
 
-const RightArrow = () => {
+export const RightArrow = () => {
   const { scrollNext } = useContext(VisibilityContext);
 
   return (

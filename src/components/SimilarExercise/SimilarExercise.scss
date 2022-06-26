@@ -1,0 +1,117 @@
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+}
+.similarExercise {
+  @include flexCenter(flex-start, column);
+
+  align-items: flex-start;
+  border: 1px solid green;
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+
+  .heading {
+    border: 1px solid purple;
+
+    h1 {
+      font-size: 30px;
+      margin: 10px 20px;
+      padding: 0 0.3rem;
+      span {
+        color: red;
+      }
+    }
+  }
+  .allExercises {
+    position: relative;
+    border: 1px solid green;
+
+    //   @include flexCenter(center, row);
+    border: 3px solid red;
+    width: 100%;
+    margin: 0 auto;
+    .Exercise {
+      width: 90%;
+
+      border-top: 3px solid rgb(93, 127, 160);
+      //   border-bottom: 3px solid rgb(93, 127, 160);
+      box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+
+      margin: 20px;
+      padding: 0.5rem;
+      cursor: pointer;
+      .image {
+        img {
+          width: 320px;
+          height: 250px;
+          object-fit: cover;
+        }
+      }
+      .texts {
+        button {
+          background-color: white;
+          border: none;
+          border: 2px solid rgb(159, 150, 150);
+          font-size: 20px;
+          padding: 0.5rem 0.6rem;
+          margin-left: 15px;
+          border-radius: 15px;
+        }
+      }
+      .description {
+        font-size: 20px;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Exercises {
+    width: 100%;
+    .heading {
+      h1 {
+        font-size: 25px;
+        margin: 10px 20px;
+        padding: 0 0.3rem;
+      }
+    }
+    .allExercises {
+      @include flexCenter(center, row);
+
+      .Exercise {
+        margin: 10px;
+        .image {
+          img {
+            width: 300px;
+          }
+        }
+        .texts {
+          button {
+            font-size: 16px;
+            padding: 0.3rem 0.5rem;
+          }
+        }
+        .description {
+          font-size: 18px;
+        }
+      }
+    }
+    // .pagination {
+    //   width: 100%;
+    //   @include flexCenter(center, row);
+    //   .paginationComponent {
+    //     width: 80%;
+    //     border: 2px solid red;
+    //     margin: 0 auto;
+    //   }
+    // }
+  }
+}
+::-webkit-scrollbar {
+  width: 0px;
+}

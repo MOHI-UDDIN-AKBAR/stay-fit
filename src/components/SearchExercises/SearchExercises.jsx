@@ -6,7 +6,7 @@ const url = "https://exercisedb.p.rapidapi.com/exercises/bodyPartList";
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "493a90b2aemsh1962f7595e10b6dp18d377jsncc1d0ad2c57c",
+    "X-RapidAPI-Key": process.env.REACT_APP_EXERCISE_API_KEY,
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };
