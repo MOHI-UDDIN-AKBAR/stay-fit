@@ -46,8 +46,9 @@ const SearchExercises = () => {
     <div className="SearchExercises">
       <div className="heading">
         <h1>
-          Awesome Exercises You <br />
-          Should Know
+          Awesome Exercises
+          <br />
+          You Should Know
         </h1>
       </div>
       <div className="input">

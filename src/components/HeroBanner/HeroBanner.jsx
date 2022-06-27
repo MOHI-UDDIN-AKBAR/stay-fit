@@ -7,11 +7,14 @@ const HeroBanner = () => {
       <div className="text">
         <h3>Fitness Club</h3>
         <h1>
-          Sweat, Smile <br />
+          Sweat, Smile
+          <br />
           And Repeat
         </h1>
         <p>Check out the most effective exercises personalized to you</p>
-        <button>Explore Exercise</button>
+        <div className="button">
+          <button>Explore Exercise</button>
+        </div>
         <div className="bigText">
           <h1>Exercises</h1>
         </div>

@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
+
 @mixin flexCenter($justify, $direction) {
   display: flex;
   flex-direction: $direction;
@@ -9,12 +15,18 @@
 .SearchExercises {
   width: 100%;
   @include flexCenter(center, column);
+  margin-top: 50px;
   .heading {
     h1 {
-      font-family: "Bungee", cursive;
+      // font-family: "Bungee", cursive;
+      // font-family: "Michroma", sans-serif;
+      // font-family: "Alegreya";
       font-size: 50px;
+      font-family: "Gemunu Libre", sans-serif;
       text-transform: capitalize;
       text-align: center;
+      color: #5b5271;
+      word-spacing: 10px;
     }
   }
   .input {
@@ -24,21 +36,36 @@
     input {
       padding: 1rem;
       width: 70%;
+      border: 2px solid #8d5185;
+      color: #5b5271;
+      font-size: 20px;
       &::placeholder {
-        color: rgb(108, 107, 107);
+        // color: rgb(108, 107, 107);
+        color: #5b5271;
+
         font-size: 20px;
+      }
+      &:focus {
+        // border: none;
+        outline: none;
+        border-radius: 5px;
       }
     }
     button {
       cursor: pointer;
-      padding: 0.9rem;
+      padding: 1rem;
       width: 170px;
-      background-color: rgb(40, 40, 40);
+      // background-color: rgb(40, 40, 40);
+      background-color: #453a60;
       color: white;
       font-size: 20px;
       border: none;
       position: relative;
       left: -3px;
+      cursor: pointer;
+      border: 2px solid #453a60;
+      border-left: none;
+
       //   margin-top: 2px;
     }
   }

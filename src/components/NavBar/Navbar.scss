@@ -23,23 +23,27 @@
   .link {
     text-decoration: none;
     color: inherit;
-    border-bottom: 3px solid rgb(103, 103, 103);
-    padding: 0.2rem;
+    border: 3px solid #77689f;
+    padding: 0.3rem;
+    border-radius: 7px;
+    // box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
     button {
       background-color: white;
       font-size: 20px;
       border: none;
       cursor: pointer;
       font-family: "Fascinate Inline";
+      color: #564b71;
     }
   }
   .activeLink {
     @extend .link;
     border: none;
+    box-shadow: none;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .NavBar {
     width: 100%;
     @include flexCenter(space-around, row);

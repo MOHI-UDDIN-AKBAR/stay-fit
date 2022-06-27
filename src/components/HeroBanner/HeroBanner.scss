@@ -4,56 +4,98 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .HeroBanner {
   width: 100%;
   margin-top: 10px;
   //   border: 1px solid green;
   @include flexCenter(space-between, row);
   .text {
-    margin-top: 110px;
+    margin-top: 100px;
     // border: 2px solid red;
     padding-left: 2.5rem;
     @include flexCenter(flex-start, column);
     align-items: flex-start;
     h3 {
-      font-family: "Anek Latin", sans-serif;
-      font-weight: bold;
-      font-size: 25px;
-      margin: 15px 0;
+      // font-family: "Anek Latin", sans-serif;
+      // font-family: "Bebas Neue", cursive;
+      font-family: "Cinzel", serif;
+      // font-family: "Sacramento", cursive;
+      // font-family: "Bungee", cursive;
+      font-size: 30px;
+      font-weight: normal;
+      margin: 0;
+      margin-top: 15px;
+      color: #615c6b;
     }
     h1 {
-      font-size: 35px;
+      font-family: "Playfair Display SC", serif;
+      font-size: 55px;
       //   font-family: "Sacramento", cursive;
-      font-family: "Bungee", cursive;
+      // font-family: "Bungee", cursive;
       font-weight: 400;
       margin: 12px 0;
+      color: #564b71;
     }
     p {
       font-family: "Anek Latin", sans-serif;
       font-weight: 600;
-      color: rgb(97, 97, 97);
+      // color: rgb(97, 97, 97);
+      color: #4c4364;
       margin: 20px 0;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
-    button {
-      border: none;
-      background-color: white;
-      padding: 0.5rem;
-      font-size: 25px;
-      border: 2px solid rgb(103, 103, 103);
-      border-radius: 5px;
-      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      margin-bottom: 10px;
-      cursor: pointer;
+    .button {
+      height: 50px;
+      // border: 2px solid green;
+      button {
+        border: none;
+        background-color: white;
+        padding: 0.5rem;
+        font-size: 25px;
+        border: 2px solid #8d5185;
+        border-radius: 5px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: #5e5084;
+        font-weight: 500;
+        &:hover {
+          border: 3px solid #8d5185;
+          transform: scale(1.04, 1.04);
+        }
+      }
     }
     .bigText {
-      z-index: -1;
+      // z-index: -1;
+      // margin: 200px 0;
+      height: 200px;
+      margin: 0 auto;
+      // border: 2px solid green;
+
+      width: 100%;
+      @include flexCenter(center, row);
       h1 {
-        font-family: "Secular One", sans-serif;
+        // border: 2px solid red;
+        width: fit-content;
+        font-family: "Secular One";
         font-size: 180px;
-        opacity: 0.2;
+        opacity: 0.3;
         margin: 0;
+        display: flex;
+        margin: 0 auto;
       }
     }
   }
@@ -62,18 +104,19 @@
     // position: relative;
     position: absolute;
     right: 0;
-    top: -10px;
+    top: 0px;
     width: 50%;
     z-index: -1;
     opacity: 0.9;
     img {
       width: 95%;
-      height: 101vh;
+      height: 98vh;
       object-fit: cover;
+      border-radius: 0 50px 0 30px;
     }
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .HeroBanner {
     .text {
       width: 100%;

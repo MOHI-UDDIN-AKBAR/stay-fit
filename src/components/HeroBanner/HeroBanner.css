@@ -2,84 +2,107 @@
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
-img {
-  width: 200px;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 .HeroBanner {
   width: 100%;
   margin-top: 10px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
 }
 .HeroBanner .text {
-  margin-top: 110px;
+  margin-top: 100px;
   padding-left: 2.5rem;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
   align-items: flex-start;
 }
 .HeroBanner .text h3 {
-  font-family: "Anek Latin", sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-  margin: 15px 0;
+  font-family: "Cinzel", serif;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 15px;
+  color: #615c6b;
 }
 .HeroBanner .text h1 {
-  font-size: 35px;
-  font-family: "Bungee", cursive;
+  font-family: "Playfair Display SC", serif;
+  font-size: 55px;
   font-weight: 400;
   margin: 12px 0;
+  color: #564b71;
 }
 .HeroBanner .text p {
   font-family: "Anek Latin", sans-serif;
   font-weight: 600;
-  color: rgb(97, 97, 97);
+  color: #4c4364;
   margin: 20px 0;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
-.HeroBanner .text button {
+.HeroBanner .text .button {
+  height: 50px;
+}
+.HeroBanner .text .button button {
   border: none;
   background-color: white;
   padding: 0.5rem;
   font-size: 25px;
-  border: 2px solid rgb(103, 103, 103);
+  border: 2px solid #8d5185;
   border-radius: 5px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin-bottom: 10px;
   cursor: pointer;
+  color: #5e5084;
+  font-weight: 500;
+}
+.HeroBanner .text .button button:hover {
+  border: 3px solid #8d5185;
+  transform: scale(1.04, 1.04);
 }
 .HeroBanner .text .bigText {
-  z-index: -1;
+  height: 200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .HeroBanner .text .bigText h1 {
-  font-family: "Secular One", sans-serif;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Secular One";
   font-size: 180px;
-  opacity: 0.2;
+  opacity: 0.3;
   margin: 0;
+  display: flex;
+  margin: 0 auto;
 }
 .HeroBanner .image {
   position: absolute;
   right: 0;
-  top: -10px;
+  top: 0px;
   width: 50%;
   z-index: -1;
   opacity: 0.9;
 }
 .HeroBanner .image img {
   width: 95%;
-  height: 101vh;
+  height: 98vh;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 0 50px 0 30px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .HeroBanner .text {
     width: 100%;
   }

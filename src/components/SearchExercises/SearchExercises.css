@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
 .SearchExercises {
   width: 100%;
   display: flex;
@@ -5,12 +8,15 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 .SearchExercises .heading h1 {
-  font-family: "Bungee", cursive;
   font-size: 50px;
+  font-family: "Gemunu Libre", sans-serif;
   text-transform: capitalize;
   text-align: center;
+  color: #5b5271;
+  word-spacing: 10px;
 }
 .SearchExercises .input {
   display: flex;
@@ -23,29 +29,39 @@
 .SearchExercises .input input {
   padding: 1rem;
   width: 70%;
+  border: 2px solid #8d5185;
+  color: #5b5271;
+  font-size: 20px;
 }
 .SearchExercises .input input::-moz-placeholder {
-  color: rgb(108, 107, 107);
+  color: #5b5271;
   font-size: 20px;
 }
 .SearchExercises .input input:-ms-input-placeholder {
-  color: rgb(108, 107, 107);
+  color: #5b5271;
   font-size: 20px;
 }
 .SearchExercises .input input::placeholder {
-  color: rgb(108, 107, 107);
+  color: #5b5271;
   font-size: 20px;
+}
+.SearchExercises .input input:focus {
+  outline: none;
+  border-radius: 5px;
 }
 .SearchExercises .input button {
   cursor: pointer;
-  padding: 0.9rem;
+  padding: 1rem;
   width: 170px;
-  background-color: rgb(40, 40, 40);
+  background-color: #453a60;
   color: white;
   font-size: 20px;
   border: none;
   position: relative;
   left: -3px;
+  cursor: pointer;
+  border: 2px solid #453a60;
+  border-left: none;
 }
 .SearchExercises .allCategory {
   position: relative;

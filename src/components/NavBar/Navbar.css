@@ -20,8 +20,9 @@
 .NavBar .link, .NavBar .activeLink {
   text-decoration: none;
   color: inherit;
-  border-bottom: 3px solid rgb(103, 103, 103);
-  padding: 0.2rem;
+  border: 3px solid #77689f;
+  padding: 0.3rem;
+  border-radius: 7px;
 }
 .NavBar .link button, .NavBar .activeLink button {
   background-color: white;
@@ -29,12 +30,14 @@
   border: none;
   cursor: pointer;
   font-family: "Fascinate Inline";
+  color: #564b71;
 }
 .NavBar .activeLink {
   border: none;
+  box-shadow: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .NavBar {
     width: 100%;
     display: flex;
