@@ -7,9 +7,10 @@
 }
 .Category {
   @include flexCenter(center, column);
-  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
-  //   border: 2px solid red;
-  margin: 20px 30px;
+  box-shadow: 0 0 3px 2px #cac6d4 inset;
+  border-radius: 10px;
+  // border: 2px solid red;
+  margin: 20px 32px;
   padding: 2rem;
   .image {
     img {
@@ -18,26 +19,84 @@
       object-fit: cover;
     }
   }
-  // span {
-  //   text-align: center;
-  // }
-  .right-arrow,
-  .left-arrow {
-    cursor: pointer;
-    background: transparent;
-    outline: none;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ff2625;
-    font-size: 25px;
-    border-radius: 4px;
-    position: absolute;
-    bottom: -20px;
-    right: 80px;
-    transform: scale(1, 1);
-    transition: 0.3s all ease-in-out;
+  .react-horizontal-scrolling-menu--inner-wrapper {
+    // height: 500px;
+    padding: 1rem 1rem;
+  }
+  span {
+    // text-align: center;
+    text-transform: capitalize;
+    color: #453a60;
+    font-weight: 600;
+  }
+}
+// .right-arrow,
+.left-arrow {
+  @include flexCenter(center, row);
+  cursor: pointer;
+  // border: 1px solid green;
+  img {
+    border: 2px solid #453a60;
+    padding: 0.3rem;
+    border-radius: 50%;
+  }
+}
+.right-arrow {
+  @extend .left-arrow;
+  img {
+    transform: rotateY(180deg);
+  }
+}
+@media screen and (max-width: 700px) {
+  .react-horizontal-scrolling-menu--inner-wrapper {
+    // height: 500px;
+    padding: 2rem 0;
+    .left-arrow {
+      @include flexCenter(flex-start, row);
+      position: relative;
+      // height: 70px;
+      background-color: white;
+      padding: 3rem 0;
+      img {
+        background-color: white;
+        z-index: 1;
+        position: absolute;
+        top: 220px;
+        // border: 1px solid red;
+      }
+    }
+    .right-arrow {
+      // @extend .left-arrow;
+      @include flexCenter(flex-start, row);
+      position: relative;
+      // height: 70px;
+      background-color: white;
+      padding: 3rem 0;
+      img {
+        background-color: white;
+        z-index: 1;
+        position: absolute;
+        top: 220px;
+        left: -230px;
+        // right: 100px;
+        // border: 1px solid red;
+      }
+      // img {
+      //   right: -200px;
+      // }
+      // @include flexCenter(flex-start, row);
+      // position: relative;
+      // // height: 70px;
+      // background-color: white;
+      // padding: 3rem 0;
+      // img {
+      //   background-color: white;
+      //   z-index: 1;
+      //   position: absolute;
+      //   top: 220px;
+      //   border: 1px solid red;
+      // }
+    }
   }
 }
 // .left-arrow {

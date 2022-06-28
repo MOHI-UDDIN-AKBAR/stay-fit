@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import "./AllCategory.css";
-import avatarMan from "../../assets/avatarMan.svg";
+import gym from "../../assets/gym.svg";
+import arrow from "../../assets/arrow.svg";
+
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import { useAllAboutGymExercise } from "../../contexts/Context";
 
@@ -8,8 +10,8 @@ export const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
 
   return (
-    <div onClick={() => scrollPrev()} className="right-arrow">
-      <img src={avatarMan} alt="right-arrow" style={{ width: "40px" }} />
+    <div onClick={() => scrollPrev()} className="left-arrow">
+      <img src={arrow} alt="left-arrow" style={{ width: "40px" }} />
     </div>
   );
 };
@@ -20,10 +22,10 @@ export const RightArrow = () => {
   return (
     <div
       onClick={() => scrollNext()}
-      className="left-arrow"
-      style={{ width: "40px" }}
+      className="right-arrow"
+      // style={{ width: "40px" }}
     >
-      <img src={avatarMan} alt="right-arrow" style={{ width: "40px" }} />
+      <img src={arrow} alt="right-arrow" style={{ width: "40px" }} />
     </div>
   );
 };
@@ -44,7 +46,7 @@ const AllCategory = ({ bodyParts }) => {
           onClick={() => setBodyPart(item)}
         >
           <div className="image">
-            <img src={avatarMan} alt={item} />
+            <img src={gym} alt={item} />
           </div>
           <span>{item}</span>
         </div>

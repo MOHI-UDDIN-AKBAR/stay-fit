@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap");
 .similarExercise {
   display: flex;
   flex-wrap: wrap;
@@ -5,36 +8,36 @@
   justify-content: flex-start;
   align-items: center;
   align-items: flex-start;
-  border: 1px solid green;
-  margin: 0 auto;
+  margin: 20px auto;
   position: relative;
   width: 90%;
-}
-.similarExercise .heading {
-  border: 1px solid purple;
 }
 .similarExercise .heading h1 {
   font-size: 30px;
   margin: 10px 20px;
   padding: 0 0.3rem;
+  font-family: "Cookie", cursive;
+  color: #514866;
+  padding: 1rem;
 }
 .similarExercise .heading h1 span {
-  color: red;
+  font-family: "Diplomata SC", cursive;
+  padding: 0 1rem;
 }
 .similarExercise .allExercises {
   position: relative;
-  border: 1px solid green;
-  border: 3px solid red;
-  width: 100%;
+  width: 98%;
   margin: 0 auto;
 }
 .similarExercise .allExercises .Exercise {
   width: 90%;
-  border-top: 3px solid rgb(93, 127, 160);
-  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+  border-bottom: 2px solid #867ca0;
   margin: 20px;
   padding: 0.5rem;
   cursor: pointer;
+}
+.similarExercise .allExercises .Exercise:hover {
+  transform: scale(1.02, 1.02);
 }
 .similarExercise .allExercises .Exercise .image img {
   width: 320px;
@@ -45,15 +48,24 @@
 .similarExercise .allExercises .Exercise .texts button {
   background-color: white;
   border: none;
-  border: 2px solid rgb(159, 150, 150);
+  border: 2px solid #b2a9c8;
   font-size: 20px;
   padding: 0.5rem 0.6rem;
   margin-left: 15px;
-  border-radius: 15px;
+  border-radius: 10px;
+  color: #564b71;
+  text-transform: capitalize;
 }
 .similarExercise .allExercises .Exercise .description {
   font-size: 20px;
   margin-left: 20px;
+  color: #4d465d;
+  text-transform: capitalize;
+  font-family: "Orbitron", sans-serif;
+}
+
+.similarExercise .react-horizontal-scrolling-menu--inner-wrapper {
+  padding: 1rem 1rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -88,4 +100,63 @@
 }
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.left-arrow, .right-arrow {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.left-arrow img, .right-arrow img {
+  border: 2px solid #453a60;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+
+.right-arrow img {
+  transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 700px) {
+  .similarExercise .react-horizontal-scrolling-menu--inner-wrapper {
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+  }
+  .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .left-arrow, .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .right-arrow {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    padding: 3rem 0;
+  }
+  .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .left-arrow img, .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .right-arrow img {
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    top: 410px;
+    left: 10px;
+  }
+  .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .right-arrow {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    padding: 3rem 0;
+  }
+  .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .right-arrow img {
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    top: 410px;
+    left: -230px;
+  }
 }/*# sourceMappingURL=SimilarExercise.css.map */

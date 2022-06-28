@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
 @mixin flexCenter($justify, $direction) {
   display: flex;
   flex-wrap: wrap;
@@ -8,29 +11,31 @@
 .Exercises {
   @include flexCenter(flex-start, column);
   align-items: flex-start;
-  border: 1px solid green;
+  // border: 1px solid green;
   width: 90%;
   .heading {
-    border: 1px solid purple;
-
+    // border: 1px solid purple;
+    margin: 20px 20px;
     h1 {
-      font-size: 30px;
-      margin: 10px 20px;
       padding: 0 0.3rem;
+      font-family: "Cinzel", serif;
+      color: #564b71;
+      font-size: 40px;
     }
   }
   .allExercises {
     // width: 100%;
     @include flexCenter(center, row);
-    border: 3px solid red;
+    // border: 3px solid red;
 
     .Exercise {
-      border-top: 3px solid rgb(93, 127, 160);
+      border-bottom: 2px solid #867ca0;
+      // border-top: 4px solid #867ca0;
       //   border-bottom: 3px solid rgb(93, 127, 160);
-      box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
-
+      // box-shadow: 0 0 3px 2px #e5e1ef inset;
       margin: 20px;
       padding: 0.5rem;
+      // border-radius: 0 0px 20px 20px;
       .image {
         img {
           width: 320px;
@@ -40,27 +45,34 @@
         button {
           background-color: white;
           border: none;
-          border: 2px solid rgb(159, 150, 150);
+          border: 2px solid #b2a9c8;
           font-size: 20px;
           padding: 0.5rem 0.6rem;
           margin-left: 15px;
-          border-radius: 15px;
+          border-radius: 10px;
+          color: #564b71;
+          text-transform: capitalize;
         }
       }
       .description {
         font-size: 20px;
         margin-left: 20px;
+        color: #4d465d;
+        text-transform: capitalize;
+        font-family: "Orbitron", sans-serif;
       }
     }
   }
   .pagination {
     width: 100%;
+    margin: 50px 0;
     @include flexCenter(center, row);
     .paginationComponent {
       //   width: 70%;
       //   border: 2px solid red;
       margin: 0 auto;
       @include flexCenter(center, row);
+      // color: #4d465d;
     }
   }
 }
@@ -101,7 +113,7 @@
       @include flexCenter(center, row);
       .paginationComponent {
         width: 80%;
-        border: 2px solid red;
+        // border: 2px solid red;
         margin: 0 auto;
       }
     }

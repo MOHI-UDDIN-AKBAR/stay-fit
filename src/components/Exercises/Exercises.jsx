@@ -22,6 +22,7 @@ const Exercises = () => {
     indexOfFirstExercise,
     indexOfLastExercise
   );
+  // const currentExercise = exercises;
   const paginate = (e, value) => {
     setCurrentPage(value);
     window.scrollTo({ top: 1300, behavior: "smooth" });
@@ -31,15 +32,23 @@ const Exercises = () => {
 
     // console.log(exercises);
   }, [bodyPart]);
+  const functionForScroll = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <div className="Exercises">
       <div className="heading">
         <h1>Showing Results</h1>
       </div>
-      <div className="allExercises">
+      <div className="allExercises" id="exercises">
         {currentExercise?.map((exercise) => {
           return (
-            <Link to={`/exercise/${exercise.id}`} key={exercise.id}>
+            <Link
+              to={`/exercise/${exercise.id}`}
+              key={exercise.id}
+              style={{ textDecoration: "none" }}
+              onClick={functionForScroll}
+            >
               <div className="Exercise">
                 <div className="image">
                   <img
@@ -61,8 +70,9 @@ const Exercises = () => {
       <div className="pagination">
         {exercises.length > 9 && (
           <Pagination
-            color="primary"
+            color="secondary"
             shape="rounded"
+            variant="outlined"
             defaultPage={1}
             count={Math.ceil(exercises.length / exercisePerPage)}
             page={currentPage}

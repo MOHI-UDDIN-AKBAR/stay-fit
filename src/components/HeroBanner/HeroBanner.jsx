@@ -13,7 +13,12 @@ const HeroBanner = () => {
         </h1>
         <p>Check out the most effective exercises personalized to you</p>
         <div className="button">
-          <button>Explore Exercise</button>
+          <a
+            href="#SearchExercises"
+            style={{ scrollBehavior: "smooth", textDecoration: "none" }}
+          >
+            <button>Explore Exercise</button>
+          </a>
         </div>
         <div className="bigText">
           <h1>Exercises</h1>

@@ -3,8 +3,9 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
-  margin: 20px 30px;
+  box-shadow: 0 0 3px 2px #cac6d4 inset;
+  border-radius: 10px;
+  margin: 20px 32px;
   padding: 2rem;
 }
 .Category .image img {
@@ -13,21 +14,65 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.Category .right-arrow,
-.Category .left-arrow {
-  cursor: pointer;
-  background: transparent;
-  outline: none;
-  border: none;
+.Category .react-horizontal-scrolling-menu--inner-wrapper {
+  padding: 1rem 1rem;
+}
+.Category span {
+  text-transform: capitalize;
+  color: #453a60;
+  font-weight: 600;
+}
+
+.left-arrow, .right-arrow {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
-  color: #ff2625;
-  font-size: 25px;
-  border-radius: 4px;
-  position: absolute;
-  bottom: -20px;
-  right: 80px;
-  transform: scale(1, 1);
-  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+.left-arrow img, .right-arrow img {
+  border: 2px solid #453a60;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+
+.right-arrow img {
+  transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 700px) {
+  .react-horizontal-scrolling-menu--inner-wrapper {
+    padding: 2rem 0;
+  }
+  .react-horizontal-scrolling-menu--inner-wrapper .left-arrow, .react-horizontal-scrolling-menu--inner-wrapper .right-arrow {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    padding: 3rem 0;
+  }
+  .react-horizontal-scrolling-menu--inner-wrapper .left-arrow img, .react-horizontal-scrolling-menu--inner-wrapper .right-arrow img {
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    top: 220px;
+  }
+  .react-horizontal-scrolling-menu--inner-wrapper .right-arrow {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    padding: 3rem 0;
+  }
+  .react-horizontal-scrolling-menu--inner-wrapper .right-arrow img {
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    top: 220px;
+    left: -230px;
+  }
 }/*# sourceMappingURL=AllCategory.css.map */

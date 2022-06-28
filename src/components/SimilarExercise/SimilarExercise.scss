@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap");
+
 @mixin flexCenter($justify, $direction) {
   display: flex;
   flex-wrap: wrap;
@@ -9,41 +15,50 @@
   @include flexCenter(flex-start, column);
 
   align-items: flex-start;
-  border: 1px solid green;
-  margin: 0 auto;
+  // border: 1px solid green;
+  margin: 20px auto;
   position: relative;
   width: 90%;
 
   .heading {
-    border: 1px solid purple;
+    // border: 1px solid purple;
 
     h1 {
       font-size: 30px;
       margin: 10px 20px;
       padding: 0 0.3rem;
+      font-family: "Cookie", cursive;
+      color: #514866;
+      padding: 1rem;
       span {
-        color: red;
+        // color: red;
+        font-family: "Diplomata SC", cursive;
+        padding: 0 1rem;
       }
     }
   }
   .allExercises {
     position: relative;
-    border: 1px solid green;
+    // border: 1px solid green;
 
     //   @include flexCenter(center, row);
-    border: 3px solid red;
-    width: 100%;
+    // border: 3px solid red;
+    width: 98%;
     margin: 0 auto;
     .Exercise {
       width: 90%;
 
-      border-top: 3px solid rgb(93, 127, 160);
+      // border-top: 3px solid rgb(93, 127, 160);
       //   border-bottom: 3px solid rgb(93, 127, 160);
-      box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+      // box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+      border-bottom: 2px solid #867ca0;
 
       margin: 20px;
       padding: 0.5rem;
       cursor: pointer;
+      &:hover {
+        transform: scale(1.02, 1.02);
+      }
       .image {
         img {
           width: 320px;
@@ -51,25 +66,37 @@
           object-fit: cover;
         }
       }
+
       .texts {
         button {
           background-color: white;
           border: none;
-          border: 2px solid rgb(159, 150, 150);
+          border: 2px solid #b2a9c8;
           font-size: 20px;
           padding: 0.5rem 0.6rem;
           margin-left: 15px;
-          border-radius: 15px;
+          border-radius: 10px;
+          color: #564b71;
+          text-transform: capitalize;
         }
       }
       .description {
         font-size: 20px;
         margin-left: 20px;
+        color: #4d465d;
+        text-transform: capitalize;
+        font-family: "Orbitron", sans-serif;
       }
     }
   }
 }
-
+.similarExercise {
+  .react-horizontal-scrolling-menu--inner-wrapper {
+    // height: 500px;
+    padding: 1rem 1rem;
+    // border: 2px solid red;
+  }
+}
 @media screen and (max-width: 600px) {
   .Exercises {
     width: 100%;
@@ -114,4 +141,76 @@
 }
 ::-webkit-scrollbar {
   width: 0px;
+}
+.left-arrow {
+  @include flexCenter(center, row);
+  cursor: pointer;
+  // border: 1px solid green;
+  img {
+    border: 2px solid #453a60;
+    padding: 0.3rem;
+    border-radius: 50%;
+  }
+}
+.right-arrow {
+  @extend .left-arrow;
+  img {
+    transform: rotateY(180deg);
+  }
+}
+@media screen and (max-width: 700px) {
+  .similarExercise {
+    .react-horizontal-scrolling-menu--inner-wrapper {
+      // height: 500px;
+      padding: 2rem 0;
+      padding-bottom: 3rem;
+      .left-arrow {
+        @include flexCenter(flex-start, row);
+        position: relative;
+        // height: 70px;
+        background-color: white;
+        padding: 3rem 0;
+        img {
+          background-color: white;
+          z-index: 1;
+          position: absolute;
+          top: 410px;
+          left: 10px;
+          // border: 1px solid red;
+        }
+      }
+      .right-arrow {
+        // @extend .left-arrow;
+        @include flexCenter(flex-start, row);
+        position: relative;
+        // height: 70px;
+        background-color: white;
+        padding: 3rem 0;
+        img {
+          background-color: white;
+          z-index: 1;
+          position: absolute;
+          top: 410px;
+          left: -230px;
+          // right: 100px;
+          // border: 1px solid red;
+        }
+        // img {
+        //   right: -200px;
+        // }
+        // @include flexCenter(flex-start, row);
+        // position: relative;
+        // // height: 70px;
+        // background-color: white;
+        // padding: 3rem 0;
+        // img {
+        //   background-color: white;
+        //   z-index: 1;
+        //   position: absolute;
+        //   top: 220px;
+        //   border: 1px solid red;
+        // }
+      }
+    }
+  }
 }

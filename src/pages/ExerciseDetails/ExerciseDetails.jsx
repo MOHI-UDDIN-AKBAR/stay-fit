@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./ExerciseDetails.css";
 import { useParams } from "react-router-dom";
 import { useAllAboutGymExercise } from "../../contexts/Context";
-import BodyPartImage from "../../assets/icons/body-part.png";
-import TargetImage from "../../assets/icons/target.png";
-import EquipmentImage from "../../assets/icons/equipment.png";
+import BodyPartImage from "../../assets/icons/one.svg";
+import TargetImage from "../../assets/icons/two.svg";
+import EquipmentImage from "../../assets/icons/three.svg";
 import ExerciseFromYoutube from "../../components/ExerciseFromYoutube/ExerciseFromYoutube";
 import SimilarExercise from "../../components/SimilarExercise/SimilarExercise";
 const ExerciseDetails = () => {

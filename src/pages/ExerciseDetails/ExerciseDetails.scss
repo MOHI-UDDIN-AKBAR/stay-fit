@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+
 @mixin flexCenter($justify, $direction) {
   display: flex;
   flex-wrap: wrap;
@@ -19,13 +22,17 @@
   .details {
     h1 {
       font-size: 35px;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
+      // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      // sans-serif;
       text-transform: capitalize;
+      font-family: "Diplomata SC", cursive;
+      color: #564b71;
     }
     p {
       font-size: 18px;
       text-align: justify;
+      color: #514866;
+      font-family: "EB Garamond", serif;
     }
     .extraDetails {
       margin-top: 70px;
@@ -40,7 +47,7 @@
           height: 40px;
           object-fit: cover;
           margin-right: 15px;
-          border: 1px solid grey;
+          border: 2px solid #6d6779;
           padding: 1rem;
           border-radius: 50%;
         }
@@ -48,6 +55,7 @@
           font-size: 20px;
           padding: 0.4rem;
           text-transform: capitalize;
+          color: #30205c;
         }
       }
     }

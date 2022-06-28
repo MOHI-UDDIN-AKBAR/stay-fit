@@ -1,19 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap");
 .exerciseFromYoutube {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border: 4px solid green;
 }
 .exerciseFromYoutube .heading h1 {
   margin: 10px 0;
+  color: #514866;
+  font-family: "Cookie", cursive;
+  font-size: 30px;
+  padding: 1rem;
 }
 .exerciseFromYoutube .heading h1 span {
-  color: red;
+  font-family: "Diplomata SC", cursive;
+  font-size: 40px;
+  padding: 0 1rem;
 }
 .exerciseFromYoutube .allExerciseFromYoutube {
-  border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -21,20 +28,21 @@
   align-items: center;
 }
 .exerciseFromYoutube .allExerciseFromYoutube a {
-  border: 1px solid green;
   width: 300px;
   text-decoration: none;
   color: black;
   margin: 30px;
 }
-.exerciseFromYoutube .allExerciseFromYoutube a .image {
-  border: 1px solid purple;
+.exerciseFromYoutube .allExerciseFromYoutube a:hover {
+  transform: scale(1.02, 1.02);
 }
 .exerciseFromYoutube .allExerciseFromYoutube a .image img {
   width: 100%;
   height: 220px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 3px 1px #dbd8e0;
 }
 .exerciseFromYoutube .allExerciseFromYoutube a .titleAndChannelName {
   display: flex;
@@ -49,9 +57,13 @@
   font-size: 20px;
   padding: 0.3rem;
   font-weight: bold;
+  font-family: "Cormorant", serif;
+  color: #5a5072;
 }
 .exerciseFromYoutube .allExerciseFromYoutube a .titleAndChannelName small {
   font: 16px;
   padding: 0.3rem;
-  color: rgb(95, 92, 92);
+  font-weight: 600;
+  color: #493f61;
+  font-family: "Cormorant", serif;
 }/*# sourceMappingURL=ExerciseFromYoutube.css.map */

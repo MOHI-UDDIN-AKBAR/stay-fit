@@ -72,11 +72,13 @@
   .allCategory {
     // @include flexCenter(center, column);
     position: relative;
-    border: 1px solid green;
+    // border: 1px solid green;
     width: 85%;
     // display: flex;
     // flex-wrap: wrap;
     margin: 60px 30px;
+    // height: 400px;
+    padding: 0.5rem;
   }
 }
 ::-webkit-scrollbar {

@@ -43,7 +43,7 @@ const SearchExercises = () => {
   //   console.log(exercises);
   // }, [bodyPart]);
   return (
-    <div className="SearchExercises">
+    <div className="SearchExercises" id="SearchExercises">
       <div className="heading">
         <h1>
           Awesome Exercises

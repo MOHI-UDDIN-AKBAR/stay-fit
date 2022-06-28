@@ -30,9 +30,13 @@ const NavBar = () => {
       <NavLink to="/" className={isActive ? "activeLink" : "link"}>
         <button>Home</button>
       </NavLink>
-      <NavLink to="#exercises" className={isActive ? "link" : "activeLink"}>
+      <a
+        href="#exercises"
+        className={isActive ? "link" : "activeLink"}
+        style={{ scrollBehavior: "smooth" }}
+      >
         <button>Exercises</button>
-      </NavLink>
+      </a>
     </div>
   );
 };
