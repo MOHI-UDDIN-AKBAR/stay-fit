@@ -23,6 +23,7 @@
 .similarExercise .heading h1 span {
   font-family: "Diplomata SC", cursive;
   padding: 0 1rem;
+  font-size: 30px;
 }
 .similarExercise .allExercises {
   position: relative;
@@ -72,9 +73,12 @@
     width: 100%;
   }
   .Exercises .heading h1 {
-    font-size: 25px;
+    font-size: 22px;
     margin: 10px 20px;
     padding: 0 0.3rem;
+  }
+  .Exercises .heading h1 span {
+    font-size: 25px;
   }
   .Exercises .allExercises {
     display: flex;
@@ -126,6 +130,7 @@
 @media screen and (max-width: 700px) {
   .similarExercise .allExercises .react-horizontal-scrolling-menu--inner-wrapper {
     padding: 2rem 0;
+    padding-bottom: 2.5rem;
     padding-bottom: 3rem;
   }
   .similarExercise .allExercises .react-horizontal-scrolling-menu--inner-wrapper .leftArrow, .similarExercise .allExercises .react-horizontal-scrolling-menu--inner-wrapper .rightArrow {

@@ -4,7 +4,7 @@ const gymExercise = createContext();
 const optionsForYoutube = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": process.env.REACT_APP_EXERCISE_API_KEY,
+    "X-RapidAPI-Key": process.env.REACT_APP_EXERCISE_API_KEY_FOR_YOUTUBE_SEARCH,
     "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
   },
 };

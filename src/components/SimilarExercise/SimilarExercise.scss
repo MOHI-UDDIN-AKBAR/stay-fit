@@ -28,9 +28,9 @@
       color: #514866;
       padding: 1rem;
       span {
-        // color: red;
         font-family: "Diplomata SC", cursive;
         padding: 0 1rem;
+        font-size: 30px;
       }
     }
   }
@@ -90,9 +90,12 @@
     width: 100%;
     .heading {
       h1 {
-        font-size: 25px;
+        font-size: 22px;
         margin: 10px 20px;
         padding: 0 0.3rem;
+        span {
+          font-size: 25px;
+        }
       }
     }
     .allExercises {
@@ -144,6 +147,7 @@
     .allExercises {
       .react-horizontal-scrolling-menu--inner-wrapper {
         padding: 2rem 0;
+        padding-bottom: 2.5rem;
         padding-bottom: 3rem;
         .leftArrow {
           @include flexCenter(flex-start, row);
