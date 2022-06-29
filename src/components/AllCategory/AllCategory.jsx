@@ -37,7 +37,7 @@ const AllCategory = ({ bodyParts }) => {
   }, [bodyPart]);
   return (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
-      {bodyParts.map((item) => (
+      {bodyParts?.map((item) => (
         <div
           key={item.id || item}
           itemId={item.id || item}

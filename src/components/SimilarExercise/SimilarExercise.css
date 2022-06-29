@@ -30,7 +30,6 @@
   margin: 0 auto;
 }
 .similarExercise .allExercises .Exercise {
-  width: 90%;
   border-bottom: 2px solid #867ca0;
   margin: 20px;
   padding: 0.5rem;
@@ -102,30 +101,34 @@
   width: 0px;
 }
 
-.left-arrow, .right-arrow {
+.leftArrow, .rightArrow {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-.left-arrow img, .right-arrow img {
+.leftArrow img, .rightArrow img {
   border: 2px solid #453a60;
   padding: 0.3rem;
+  transform: rotateY(180deg);
   border-radius: 50%;
 }
 
-.right-arrow img {
-  transform: rotateY(180deg);
+.rightArrow img {
+  transform: rotateY(360deg);
 }
 
 @media screen and (max-width: 700px) {
-  .similarExercise .react-horizontal-scrolling-menu--inner-wrapper {
+  .similarExercise .allExercises .react-horizontal-scrolling-menu--inner-wrapper {
     padding: 2rem 0;
     padding-bottom: 3rem;
   }
-  .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .left-arrow, .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .right-arrow {
+  .similarExercise .allExercises .react-horizontal-scrolling-menu--inner-wrapper .leftArrow, .similarExercise .allExercises .react-horizontal-scrolling-menu--inner-wrapper .rightArrow {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -135,14 +138,14 @@
     background-color: white;
     padding: 3rem 0;
   }
-  .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .left-arrow img, .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .right-arrow img {
+  .similarExercise .allExercises .react-horizontal-scrolling-menu--inner-wrapper .leftArrow img, .similarExercise .allExercises .react-horizontal-scrolling-menu--inner-wrapper .rightArrow img {
     background-color: white;
     z-index: 1;
     position: absolute;
     top: 410px;
     left: 10px;
   }
-  .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .right-arrow {
+  .similarExercise .allExercises .react-horizontal-scrolling-menu--inner-wrapper .rightArrow {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -152,7 +155,7 @@
     background-color: white;
     padding: 3rem 0;
   }
-  .similarExercise .react-horizontal-scrolling-menu--inner-wrapper .right-arrow img {
+  .similarExercise .allExercises .react-horizontal-scrolling-menu--inner-wrapper .rightArrow img {
     background-color: white;
     z-index: 1;
     position: absolute;

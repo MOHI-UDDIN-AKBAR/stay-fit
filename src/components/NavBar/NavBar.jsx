@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 const NavBar = () => {
   // const [location, setLocation] = useState("");
   const [isActive, setIsActive] = useState(false);
-
+  // const [height, setHeight] = useState(0);
   const location = useLocation();
   const getLocation = () => {
     // setIsActive(pathname);
@@ -14,6 +14,24 @@ const NavBar = () => {
       setIsActive(true);
     } else {
       setIsActive(false);
+    }
+  };
+  const ExecuteScroll = (height) => {
+    window.scrollTo({
+      top: height,
+      behavior: "smooth",
+    });
+  };
+  const scrollTODown = () => {
+    if (location.pathname !== "/") {
+      console.log(window.innerWidth);
+      if (window.innerWidth < 400) {
+        ExecuteScroll(1500);
+      } else if (window.innerWidth < 800) {
+        ExecuteScroll(1300);
+      } else {
+        ExecuteScroll(700);
+      }
     }
   };
   useEffect(() => {
@@ -35,7 +53,7 @@ const NavBar = () => {
         className={isActive ? "link" : "activeLink"}
         style={{ scrollBehavior: "smooth" }}
       >
-        <button>Exercises</button>
+        <button onClick={scrollTODown}>Exercises</button>
       </a>
     </div>
   );

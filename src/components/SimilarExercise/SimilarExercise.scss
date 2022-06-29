@@ -15,14 +15,11 @@
   @include flexCenter(flex-start, column);
 
   align-items: flex-start;
-  // border: 1px solid green;
   margin: 20px auto;
   position: relative;
   width: 90%;
 
   .heading {
-    // border: 1px solid purple;
-
     h1 {
       font-size: 30px;
       margin: 10px 20px;
@@ -39,18 +36,9 @@
   }
   .allExercises {
     position: relative;
-    // border: 1px solid green;
-
-    //   @include flexCenter(center, row);
-    // border: 3px solid red;
     width: 98%;
     margin: 0 auto;
     .Exercise {
-      width: 90%;
-
-      // border-top: 3px solid rgb(93, 127, 160);
-      //   border-bottom: 3px solid rgb(93, 127, 160);
-      // box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
       border-bottom: 2px solid #867ca0;
 
       margin: 20px;
@@ -128,88 +116,61 @@
         }
       }
     }
-    // .pagination {
-    //   width: 100%;
-    //   @include flexCenter(center, row);
-    //   .paginationComponent {
-    //     width: 80%;
-    //     border: 2px solid red;
-    //     margin: 0 auto;
-    //   }
-    // }
   }
 }
 ::-webkit-scrollbar {
   width: 0px;
 }
-.left-arrow {
+.leftArrow {
   @include flexCenter(center, row);
   cursor: pointer;
-  // border: 1px solid green;
+  height: fit-content;
   img {
     border: 2px solid #453a60;
     padding: 0.3rem;
+    transform: rotateY(180deg);
+
     border-radius: 50%;
   }
 }
-.right-arrow {
-  @extend .left-arrow;
+.rightArrow {
+  @extend .leftArrow;
   img {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
   }
 }
 @media screen and (max-width: 700px) {
   .similarExercise {
-    .react-horizontal-scrolling-menu--inner-wrapper {
-      // height: 500px;
-      padding: 2rem 0;
-      padding-bottom: 3rem;
-      .left-arrow {
-        @include flexCenter(flex-start, row);
-        position: relative;
-        // height: 70px;
-        background-color: white;
-        padding: 3rem 0;
-        img {
+    .allExercises {
+      .react-horizontal-scrolling-menu--inner-wrapper {
+        padding: 2rem 0;
+        padding-bottom: 3rem;
+        .leftArrow {
+          @include flexCenter(flex-start, row);
+          position: relative;
           background-color: white;
-          z-index: 1;
-          position: absolute;
-          top: 410px;
-          left: 10px;
-          // border: 1px solid red;
+          padding: 3rem 0;
+          img {
+            background-color: white;
+            z-index: 1;
+            position: absolute;
+            top: 410px;
+            left: 10px;
+          }
         }
-      }
-      .right-arrow {
-        // @extend .left-arrow;
-        @include flexCenter(flex-start, row);
-        position: relative;
-        // height: 70px;
-        background-color: white;
-        padding: 3rem 0;
-        img {
+        .rightArrow {
+          @include flexCenter(flex-start, row);
+          position: relative;
           background-color: white;
-          z-index: 1;
-          position: absolute;
-          top: 410px;
-          left: -230px;
-          // right: 100px;
-          // border: 1px solid red;
+          padding: 3rem 0;
+          img {
+            background-color: white;
+            z-index: 1;
+            position: absolute;
+            top: 410px;
+            left: -230px;
+          }
         }
-        // img {
-        //   right: -200px;
-        // }
-        // @include flexCenter(flex-start, row);
-        // position: relative;
-        // // height: 70px;
-        // background-color: white;
-        // padding: 3rem 0;
-        // img {
-        //   background-color: white;
-        //   z-index: 1;
-        //   position: absolute;
-        //   top: 220px;
-        //   border: 1px solid red;
-        // }
       }
     }
   }
